@@ -37,7 +37,7 @@
   <p>What the tutor knows about you comes only from what you said. We do not record facts about your health, religion, politics, sexuality, money or dealings with the law there, even when a storyline rehearses such a situation. In the app, under <em>Your storylines</em>, <em>What you now do</em>, you can read what is known about you and remove any line: a line you remove is never written again.</p>
 
   <h2>3. Your voice</h2>
-  <p>When you speak, your recording is sent to our server so that it can be heard: by a Google Gemini model during a scene, and by Microsoft Azure Speech together with a Gemini model when a rehearsal or warm-up line is checked. We keep the words, not the sound: a recording is not stored on our servers once it has been processed.</p>
+  <p>When you speak, your recording is sent to our server so that it can be heard. During a scene it is written down by an OpenAI transcription model, or heard by a Google Gemini model when OpenAI cannot answer, and Microsoft Azure Speech may listen again when nothing was heard. When a rehearsal or warm-up line is checked, Microsoft Azure Speech hears it. We keep the words, not the sound: a recording is not stored on our servers once it has been processed.</p>
   <p>On your phone, a recording stays in the app's temporary storage so that you can hear yourself, and is cleared by the app.</p>
   <p>The characters' voices are synthesised by Inworld or by Microsoft Azure Speech. Your phone sends the text of each line to the one that speaks your scene, together with a few lines said just before it, which can include what you said, so that the line is spoken in the tone of the conversation. The audio plays as it arrives and stays on your phone only while the scene is open, so that you can hear a line again.</p>
   <p>Other lines you can listen to, such as the lines suggested to you, are synthesised on our server by Microsoft Azure Speech. Short clips of them are kept in a cache for up to thirty days so that a line plays at once.</p>
@@ -56,13 +56,14 @@
     <thead><tr><th>Who</th><th>What for</th><th>Where</th></tr></thead>
     <tbody>
       <tr><td>Google Cloud: Firebase Authentication, Cloud Firestore</td><td>Sign-in, and storing your account, storylines, scenes and notes</td><td>Germany</td></tr>
-      <tr><td>Google Cloud: Gemini models on Vertex AI</td><td>Writing your storylines, playing the characters, hearing what you say and writing your debriefs</td><td>Google's data centres, which may be outside the European Economic Area</td></tr>
+      <tr><td>OpenAI</td><td>Writing your storylines, playing the characters, hearing what you say, and writing your debriefs and notes</td><td>United States</td></tr>
+      <tr><td>Google Cloud: Gemini models on Vertex AI</td><td>The same, when OpenAI cannot answer</td><td>Google's data centres, which may be outside the European Economic Area</td></tr>
       <tr><td>Microsoft Azure: Speech</td><td>Hearing a rehearsal or warm-up line, speaking the characters' lines when Inworld does not, and synthesising the other lines you can listen to</td><td>France</td></tr>
       <tr><td>Inworld AI</td><td>Speaking the characters' lines: it receives the text of each line and of a few lines said just before it, which can include what you said</td><td>United States</td></tr>
       <tr><td>Upstash</td><td>Short-lived caches: your settings, your month's usage, voice clips and the scene in progress</td><td>Germany</td></tr>
       <tr><td>Hostinger</td><td>The server our application runs on</td><td>France</td></tr>
       <tr><td>RevenueCat</td><td>Your membership's status; it receives your email address and name</td><td>United States</td></tr>
-      <tr><td>Sentry</td><td>Error reports, performance measurements and logs. From the app, a replay of layout and taps in which every text and image is hidden. From our servers, a report or a log line can include a short fragment of a conversation where it is needed to understand a fault; the text sent to the language models and their answers are not included</td><td>Germany</td></tr>
+      <tr><td>Sentry</td><td>Error reports, performance measurements and logs. From the app, the screen you were on and the warnings and errors it logged. From our servers, a report or a log line can include a short fragment of a conversation where it is needed to understand a fault; the text sent to the language models and their answers are not included</td><td>Germany</td></tr>
     </tbody>
   </table>
   <p>Payment for a membership is taken by the Apple App Store or Google Play. They handle your payment details under their own policies; we never see them.</p>
