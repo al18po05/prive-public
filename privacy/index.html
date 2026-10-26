@@ -13,7 +13,7 @@
   <h1>Privacy Policy</h1>
   <div class="rule"></div>
   <p class="lead">PRIVÉ is a private tutor, and a tutor has to remember you to be of any use. This page says what we keep, why, who handles it for us, and how you take it away.</p>
-  <p class="date">Last updated 1 October 2026</p>
+  <p class="date">Last updated 26 October 2026</p>
 
   <h2>1. Who we are</h2>
   <p>PRIVÉ is operated by Wisecraft Ltd, a company established in Cyprus ("we"). We decide how the personal data described here is used, which makes us its controller. Write to <a href="mailto:concierge@prive.talk">concierge@prive.talk</a> about anything on this page.</p>
@@ -39,7 +39,8 @@
   <h2>3. Your voice</h2>
   <p>When you speak, your recording is sent to our server so that it can be heard: by a Google Gemini model during a scene, and by Microsoft Azure Speech together with a Gemini model when a rehearsal or warm-up line is checked. We keep the words, not the sound: a recording is not stored on our servers once it has been processed.</p>
   <p>On your phone, a recording stays in the app's temporary storage so that you can hear yourself, and is cleared by the app.</p>
-  <p>The voices you hear are synthesised. Short clips of them are kept in a cache for up to thirty days so that a line plays at once.</p>
+  <p>The characters' voices are synthesised by Inworld or by Microsoft Azure Speech. Your phone sends the text of each line to the one that speaks your scene, together with a few lines said just before it, which can include what you said, so that the line is spoken in the tone of the conversation. The audio plays as it arrives and stays on your phone only while the scene is open, so that you can hear a line again.</p>
+  <p>Other lines you can listen to, such as the lines suggested to you, are synthesised on our server by Microsoft Azure Speech. Short clips of them are kept in a cache for up to thirty days so that a line plays at once.</p>
 
   <h2>4. What we do not do</h2>
   <ul>
@@ -55,8 +56,9 @@
     <thead><tr><th>Who</th><th>What for</th><th>Where</th></tr></thead>
     <tbody>
       <tr><td>Google Cloud: Firebase Authentication, Cloud Firestore</td><td>Sign-in, and storing your account, storylines, scenes and notes</td><td>Germany</td></tr>
-      <tr><td>Google Cloud: Gemini models on Vertex AI, Cloud Text-to-Speech</td><td>Writing your storylines, playing the characters, hearing what you say, writing your debriefs and speaking the lines</td><td>Google's data centres, which may be outside the European Economic Area</td></tr>
-      <tr><td>Microsoft Azure: Speech</td><td>Hearing a rehearsal or warm-up line</td><td>France</td></tr>
+      <tr><td>Google Cloud: Gemini models on Vertex AI</td><td>Writing your storylines, playing the characters, hearing what you say and writing your debriefs</td><td>Google's data centres, which may be outside the European Economic Area</td></tr>
+      <tr><td>Microsoft Azure: Speech</td><td>Hearing a rehearsal or warm-up line, speaking the characters' lines when Inworld does not, and synthesising the other lines you can listen to</td><td>France</td></tr>
+      <tr><td>Inworld AI</td><td>Speaking the characters' lines: it receives the text of each line and of a few lines said just before it, which can include what you said</td><td>United States</td></tr>
       <tr><td>Upstash</td><td>Short-lived caches: your settings, your month's usage, voice clips and the scene in progress</td><td>Germany</td></tr>
       <tr><td>Hostinger</td><td>The server our application runs on</td><td>France</td></tr>
       <tr><td>RevenueCat</td><td>Your membership's status; it receives your email address and name</td><td>United States</td></tr>
